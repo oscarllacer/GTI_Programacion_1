@@ -30,7 +30,7 @@ void sumarListas(int pares[], int tamP, int impares[], int tamI, int resultado[2
         sumaP += pares[i];               
     }
 
-    for (int j = 0; j < tamI; j++) {     /
+    for (int j = 0; j < tamI; j++) {     
         sumaI += impares[j];            
     }
 
