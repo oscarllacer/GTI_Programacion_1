@@ -114,4 +114,48 @@ main(){
     }
     return 0;
 }
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
 
+/*
+EJERCICIO 5: Funcion que compruebe si dos circulos son tangentes
+
+Dos Circulos son tangentes exteriores si la distancia entre sus centros es igual a la suma de los radios
+
+Dos Circulos son tangentes interiores si la distancia entre sus centros es igual a la diferencia de sus  radios
+
+*/
+
+int SonTangentes(int x1, int y, int r1,  int x2, int y2, int r2){
+    int dx = x2 - x1 , dy = y2 - y1;
+    int d2 = dx * dx + dy * dy;
+
+    int suma = r1 + r2;
+    int dif = r1 - r1;
+    
+    if(dif < 0) dif = - dif; //Valor Absoluto
+
+    return (d2 == suma*suma || d2 == dif*dif);
+
+}
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+
+/*EJERCICIO 6: Funcion que ordende de mayor a menor unn arreglo formado por circulos según su tamaño*/
+
+void OrdenarCirculos(int r[], int n){
+    int i, J, maxIndex, tmp;
+    for(i=o; i<n-1; i++){
+        maxIndex = i;
+        for (J = i+1; J<n; J++){
+            if(r[J] > r[maxIndex]){
+                maxIndex = J;
+            }
+        }
+        tmp = r[i];
+        r[i] = r[maxIndex];
+        r[maxIndex] = tmp;
+    }
+}
