@@ -24,3 +24,42 @@ int VariosCuadrantes(Circulo* lc, int nc, Circulo * ls){
     }
     return 0;
 }
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+
+/*EJERCICIO 2: Dada una lista de puntos y otra de circulos, determina que circulos tiene mas puntos 
+
+lista<Circulos> , lista<Puntos> --> masPuntos() --> Circulo
+
+*/
+Circulo masPuntos(Circulo* lc, int nc, Puntos* lp, int np){
+    Punto Centro;
+    double radio;
+    
+    int contadores[nc]={}; //creo un contador con el numero que haya de circulos y lo declaramos en un principio como todo a cero {}
+
+    int max=0;
+
+    Circulo cmax;
+
+    for(int i = 0; i<nc, i++){//Recorre la lista de circulos
+        centro = lc[i].getCentro();//el lc[i] es un circulo y con el getCentro saco el centro
+        radio = lc[i].getRadio();
+
+        for(int j=0; i<jnp, j++){//Recorre lista de puntos
+            if(lp[j].distancia(centro) < radio){
+                contadores[i]++;
+            }
+
+        }
+        if(contadores[i] > max){
+            max = contadores[i];
+            cmax = lc[i];
+        }
+
+    }
+    if(max==0) return Circulo(); //Si un circulo no tiene puntos devolvemos un circulo vacio
+    else
+       return cmax;
+}
