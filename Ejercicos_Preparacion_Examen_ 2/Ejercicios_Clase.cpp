@@ -87,3 +87,31 @@ void GenerarSucesion(int a[], int n){
         a[i]=a[i-1]+2*a[i-2];
     } 
 }
+
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+/*EJERCICIO 4: Dado un array A, calcula para cada elemento i la suma de todos los elementos que le siguen*/
+
+void SumasPosteriores(int A[], int n, int s[]){
+    for(int i=0; i<n; i++){
+        int suma = 0;
+        for(int j = i+1; J<n; J++){
+            suma + = A[J];
+        }
+        S[i] = suma;
+    }
+}
+
+main(){
+    int A[4]={1,2,3,4};
+    int S[4];
+    
+    SumasPosteriores(A, 4, S);
+
+    if(S[0] != 9 || S[1] != 7 || S[2]!=4 || S[3]!= 0){
+        cout <<"Va mal"<<endl;
+    }
+    return 0;
+}
+
